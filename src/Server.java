@@ -14,18 +14,16 @@ public class Server {
             Scanner in = new Scanner(socket.getInputStream());
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
-            out.println("Подключение создано..." + socket.getInetAddress());
+            out.println("Подключение создано..." + socket.getLocalSocketAddress());
 
             while (true) {
-                Thread.sleep(1000);
+                out.println("Horowo sliwno?");
 
-                System.out.println("Horowo sliwno?.");
-                out.println("Yes, normalno.");
+                String s = in.nextLine();
+                System.out.println(s);
             }
         } catch (IOException e) {
             e.printStackTrace();
-        } catch (InterruptedException e) {
-            System.out.println("Ошибка при выполнении потока.");
         }
     }
 }
