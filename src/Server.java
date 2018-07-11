@@ -17,9 +17,8 @@ public class Server {
             out.println("Подключение создано..." + socket.getLocalSocketAddress());
 
             while (true) {
-                out.println("Horowo sliwno?");
-
                 String s = in.nextLine();
+                out.println("You have send: " + s);
                 System.out.println(s);
             }
         } catch (IOException e) {
