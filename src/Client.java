@@ -7,16 +7,19 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("localhost", 8189)) {
+        try (Socket socket = new Socket("10.0.0.12", 8189)) {
             Scanner in = new Scanner(socket.getInputStream());
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 
-            Scanner scanner = new Scanner(System.in);
+            Scanner scanner = new Scanner(System.in); // Для ввода с клавиатуры пользователем
+            String s = "";
 
-            while (true) {
+            while (!s.equals("exit")) {
                 System.out.println(in.nextLine());
 
-                out.println("Yes, normalno.");
+                s = scanner.nextLine();
+
+                out.println(s);
             }
         } catch (IOException e) {
             e.printStackTrace();
