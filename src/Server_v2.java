@@ -1,5 +1,3 @@
-//
-
 import com.sun.net.httpserver.HttpsServer;
 
 import java.io.IOException;
