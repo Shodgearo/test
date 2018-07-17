@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class Client_v2 {
     public static void main(String[] args) {
-        String url = "https://www.youtube.com";
+        String url = "localhost";
 
         try {
             URLConnection connection = new URL(url).openConnection();
