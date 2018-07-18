@@ -12,7 +12,7 @@ public class Test extends JFrame {
     // Конструктор
     public Test() {
         super("Мой браузер.");
-        addressBar = new JTextField("Enter a address...");
+        addressBar = new JTextField("http://");
 
         addressBar.addActionListener(new ActionListener() {
             @Override
@@ -45,9 +45,11 @@ public class Test extends JFrame {
     // Загрузка данных в окно браузера
     private void loadDate(String s) {
         try {
+            System.out.println(s);
             browserPage.setPage(s);
             addressBar.setText(s);
         } catch (Exception e) {
+            e.printStackTrace();
             browserPage.setText("Страница недоступна... " + s);
         }
     }

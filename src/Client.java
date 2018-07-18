@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Client {
     public static void main(String[] args) {
-        try (Socket socket = new Socket("10.0.0.12", 8189)) {
+        try (Socket socket = new Socket("127.0.0.1", 8189)) {
             Scanner in = new Scanner(socket.getInputStream());
             PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
 

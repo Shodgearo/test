@@ -8,10 +8,10 @@ public class Example_readingText {
         File file = new File("/home/meritokrat/Рабочий стол/1.html");
 
         try {
-            Scanner br = new Scanner(new FileInputStream(file));
+            Scanner scan = new Scanner(new FileInputStream(file));
 
-            while (br.hasNextLine()) {
-                System.out.println(br.next());
+            while (scan.hasNextLine()) {
+                System.out.println(scan.next());
             }
         } catch (IOException e) {
             e.printStackTrace();
