@@ -1,6 +1,4 @@
 import javax.swing.*;
-import javax.swing.event.HyperlinkEvent;
-import javax.swing.event.HyperlinkListener;
 import java.awt.*;
 import java.io.IOException;
 import java.net.URL;
@@ -13,9 +11,11 @@ public class Client_v2 {
 
         try {
             URLConnection connection = new URL(url).openConnection();
-//            Scanner scanner = new Scanner(connection.getInputStream());
+            Scanner scanner = new Scanner(connection.getInputStream());
 
-            StringBuilder str = new StringBuilder();
+            System.out.println(scanner.nextLine());
+
+//            StringBuilder str = new StringBuilder();
 //
 //            while (scanner.hasNext()) {
 //                str.append(scanner.next());
@@ -23,7 +23,7 @@ public class Client_v2 {
 //
 //            System.out.println(str);
 
-            new Frame_Test(url);
+//            new Frame_Test(url);
         } catch (IOException e) {
             e.printStackTrace();
         }
